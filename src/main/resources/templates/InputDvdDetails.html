@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="https://thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Inser title here</title>
+</head>
+<body>
+    <h1>DVD Library</h1>
+    <hr>
+    <form action="#" th:action="@{./saveDvd}" th:object="${dvd}" method="post">
+        Enter DVD ID: <input type="text" th:field="*{dvdId}"><br><br>
+        Enter DVD Title: <input type="text" th:field="*{title}"><br><br>
+        Enter Director Name: <input type="text" th:field="*{directorName}"><br><br>
+        Enter Studio: <input type="text" th:field="*{studio}"><br><br>
+        Enter User Rating: <input type="text" th:field="*{userRating}"><br><br>
+        <input type="submit" value="Save DVD">
+    </form>
+    <br><br>
+    <a href="/">Home</a>
+</body>
+</html>
